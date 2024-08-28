@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Jersey+10&display=swap");
+* {
+  font-family: "Jersey 10", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  min-height: 100vh;
+  background: rgb(0, 220, 0);
+}
+body #title {
+  font-size: 2rem;
+  margin-top: 20px;
+}
+body #title #heart {
+  font-size: 1.5rem;
+}
+body #subtitle {
+  font-size: 1.4rem;
+  margin: 15px 0;
+}
+body #imgContainer {
+  position: relative;
+  width: 400px;
+  height: 300px;
+  background: url("https://cdn.pixabay.com/photo/2022/11/14/11/31/white-jackdaw-7591386_1280.jpg") no-repeat center center/cover;
+  cursor: pointer;
+  -webkit-clip-path: circle(60%);
+          clip-path: circle(60%);
+  box-shadow: 1px 1px 5px 1px rgba(255, 0, 0, 0.8);
+}
+body #imgContainer .heart {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(-50%, -50%) scale(0);
+  animation: heart 0.5s ease-in-out;
+}
+@keyframes heart {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

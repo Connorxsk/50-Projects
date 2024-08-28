@@ -1,0 +1,158 @@
+$primary-color: darkorange;
+$secondary-color: rgb(245, 245, 245);
+
+@mixin trans($deg) {
+  transform: translate(-50%, -50%) rotate(#{$deg}deg);
+}
+
+@mixin opacity($scale) {
+  transform: translate(-50%, -50%) scale($scale);
+}
+
+* {
+  font-family: "Gill Sans MT", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: $secondary-color;
+  height: 100vh;
+  overflow: hidden;
+}
+
+h2 {
+  text-transform: uppercase;
+  font-size: 3rem;
+}
+
+.titleReady {
+  font-size: 2rem;
+}
+
+@mixin center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  @include trans(0);
+  text-align: center;
+}
+
+.counter {
+  width: 20rem;
+  @include center();
+  @include trans(0);
+}
+
+.counter.hide {
+  @include opacity(0);
+  animation: hide 0.4s ease-in-out;
+}
+
+@keyframes hide {
+  0% {
+    @include opacity(1);
+  }
+  100% {
+    @include opacity(0);
+  }
+}
+
+.nums {
+  position: relative;
+  overflow: hidden;
+  font-size: 5rem;
+  width: 20rem;
+  height: 5rem;
+  color: $primary-color;
+
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include trans(120);
+    transform-origin: bottom center;
+  }
+
+  span.in {
+    @include trans(0);
+    animation: goIn 0.5s ease-in-out;
+  }
+
+  span.out {
+    animation: goOut 0.5s ease-in-out;
+  }
+}
+
+@keyframes goIn {
+  0% {
+    @include trans(120);
+  }
+  30% {
+    @include trans(-20);
+  }
+  60% {
+    @include trans(10);
+  }
+  100% {
+    @include trans(0);
+  }
+}
+
+@keyframes goOut {
+  0% {
+    @include trans(0);
+  }
+
+  60% {
+    @include trans(20);
+  }
+  100% {
+    @include trans(-120);
+  }
+}
+
+.final {
+  @include center();
+  height: 9rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  @include opacity(0);
+}
+
+.final.show {
+  @include opacity(1);
+  animation: show 0.6s ease-in-out;
+}
+
+@keyframes show {
+  0% {
+    @include opacity(0);
+  }
+  50% {
+    @include opacity(2);
+  }
+  100% {
+    @include opacity(1);
+  }
+}
+
+#replay {
+  display: inline-block;
+  width: 5rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 2.5rem;
+  background-color: $primary-color;
+  color: $secondary-color;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+}
+
+#replay:hover {
+  height: 5rem;
+  cursor: pointer;
+}

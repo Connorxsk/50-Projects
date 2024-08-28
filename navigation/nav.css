@@ -1,0 +1,94 @@
+* {
+  font-family: "Gill Sans MT", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: radial-gradient(circle at 0% 100%, rgba(255, 0, 0, 0.7) 0%, rgba(255, 0, 0, 0.7) 14%, rgba(255, 165, 0, 0.7) 14%, rgba(255, 165, 0, 0.7) 28%, rgba(255, 255, 0, 0.7) 28%, rgba(255, 255, 0, 0.7) 42%, rgba(0, 128, 0, 0.7) 42%, rgba(0, 128, 0, 0.7) 56%, rgba(0, 0, 255, 0.7) 56%, rgba(0, 0, 255, 0.7) 70%, rgba(75, 0, 130, 0.7) 70%, rgba(75, 0, 130, 0.7) 84%, rgba(238, 130, 238, 0.7) 84%, rgba(238, 130, 238, 0.7) 100%);
+  height: 100vh;
+}
+body #nav {
+  width: 4rem;
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  height: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: orange;
+  box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.7s linear;
+}
+body #nav .navLinks {
+  width: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style-type: none;
+  transition: all 0.7s linear;
+}
+body #nav .navLinks li {
+  opacity: 0;
+  transition: all 0.7s linear;
+}
+body #nav .navLinks li a {
+  text-decoration: none;
+  color: white;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+body #nav #navToggle {
+  width: 2rem;
+  height: 100%;
+  border: none;
+  outline: none;
+  background-color: orange;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  top: 0;
+  cursor: pointer;
+}
+body #nav #navToggle .arrow {
+  background-color: white;
+  width: 1rem;
+  height: 3px;
+  transition: all 0.7s linear;
+}
+body #nav #navToggle .line1 {
+  position: absolute;
+  top: 7px;
+  transform: rotate(-30deg);
+}
+body #nav #navToggle .line2 {
+  position: absolute;
+  bottom: 7px;
+  transform: rotate(30deg);
+}
+
+#nav.active {
+  width: 18rem;
+}
+#nav.active .navLinks {
+  width: 15rem;
+}
+#nav.active .navLinks li {
+  opacity: 1;
+  transform: rotateY(360deg);
+}
+#nav.active #navToggle .line1 {
+  top: 6px;
+  transform: rotate(405deg) translateY(6.5px);
+}
+#nav.active #navToggle .line2 {
+  bottom: 6px;
+  transform: rotate(-405deg) translateY(-6.5px);
+}/*# sourceMappingURL=nav.css.map */

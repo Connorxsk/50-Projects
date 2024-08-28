@@ -1,0 +1,32 @@
+* {
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+
+  .background {
+    width: calc(100% + 60px);
+    height: calc(100% + 60px);
+    background: url("https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExcTA0Ym9sNmVvZG1yejVtOGJobDA3NWprazdjMWZmeTI3NmdraG9obiZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/Q66ZEIpjEQddUOOKGW/giphy.gif")
+      no-repeat center center/cover;
+    filter: blur(0px);
+    z-index: -1;
+    overflow: hidden;
+  }
+  .loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    color: white;
+  }
+}

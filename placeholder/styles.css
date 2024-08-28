@@ -1,0 +1,91 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: lightgray;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+body img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: fill;
+     object-fit: fill;
+}
+body .card {
+  background-color: white;
+  width: 350px;
+  border-radius: 20px;
+  box-shadow: 2px 2px 5px 1px rgba(255, 0, 0, 0.5);
+  overflow: hidden;
+}
+body .card .header {
+  height: 200px;
+}
+body .card .info {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  padding: 10px 30px;
+}
+body .card .info #title {
+  height: 20px;
+  text-transform: uppercase;
+}
+@media (max-width: 350px) {
+  body .card .info #title {
+    height: unset;
+  }
+}
+body .card .info .excerpt {
+  width: 100%;
+  margin: 10px 0 20px;
+}
+body .card .info .excerpt div {
+  margin-bottom: 10px;
+}
+body .card .info .profile {
+  display: flex;
+}
+body .card .info .profile .avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+  overflow: hidden;
+}
+body .card .info .profile .authorInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  width: 150px;
+}
+body .card .info .profile .authorInfo #jobTitle {
+  color: silver;
+  margin-top: 10px;
+}
+body .card .line {
+  width: 100%;
+  height: 10px;
+  border-radius: 8px;
+}
+body .card .animated-bg {
+  background-image: linear-gradient(to right, rgba(240, 240, 240, 0.7) 0%, rgba(230, 230, 230, 0.7) 10%, rgba(240, 240, 240, 0.7) 20%, rgba(240, 240, 240, 0.7) 100%);
+  background-size: 200% 100%;
+  animation: bgMove 1s linear infinite;
+}
+@keyframes bgMove {
+  0% {
+    background-position: 50% 0;
+  }
+  100% {
+    background-position: -150% 0;
+  }
+}/*# sourceMappingURL=styles.css.map */

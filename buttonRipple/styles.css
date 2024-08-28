@@ -1,0 +1,70 @@
+@keyframes ripple {
+  to {
+    transform: translate(-50%, -50%) scale(4);
+    opacity: 0;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: grid;
+  grid-template: 1fr 1fr/1fr 1fr;
+  place-items: center;
+  background-color: black;
+}
+body .btn {
+  position: relative;
+  font-size: 20px;
+  color: white;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  border: none;
+  background-color: orange;
+  cursor: pointer;
+  overflow: hidden;
+}
+body .btn.one {
+  grid-column: 1;
+}
+body .btn.one .rippleOne {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.7);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.5s linear;
+}
+body .btn.two {
+  grid-column: 2;
+}
+body .btn.two .rippleTwo {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 50, 50, 0.7);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.5s linear;
+}
+body .btn.three {
+  grid-column: 1/-1;
+  grid-row: 2;
+}
+body .btn.three .rippleThree {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 255, 0.7);
+  transform: translate(-50%, -50%) scale(0);
+  animation: ripple 0.5s linear;
+}/*# sourceMappingURL=styles.css.map */
