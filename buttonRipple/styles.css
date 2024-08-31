@@ -42,6 +42,7 @@ body .btn.one .rippleOne {
   background-color: rgba(255, 255, 255, 0.7);
   transform: translate(-50%, -50%) scale(0);
   animation: ripple 0.5s linear;
+  z-index: -10;
 }
 body .btn.two {
   grid-column: 2;
@@ -54,6 +55,7 @@ body .btn.two .rippleTwo {
   background-color: rgba(255, 50, 50, 0.7);
   transform: translate(-50%, -50%) scale(0);
   animation: ripple 0.5s linear;
+  z-index: -10;
 }
 body .btn.three {
   grid-column: 1/-1;
@@ -67,4 +69,5 @@ body .btn.three .rippleThree {
   background-color: rgba(0, 0, 255, 0.7);
   transform: translate(-50%, -50%) scale(0);
   animation: ripple 0.5s linear;
+  z-index: -10;
 }/*# sourceMappingURL=styles.css.map */
