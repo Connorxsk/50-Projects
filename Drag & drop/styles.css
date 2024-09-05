@@ -1,0 +1,46 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+}
+body .emptyBox {
+  height: 150px;
+  width: 150px;
+  margin: 1rem;
+  border: 2px solid black;
+  background: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExZTlkbTNrcnJtaXZzczVtMXl3dzEycW9nZDY4NXFkdnJzZXprcWRwdCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/TBdMZk2TOONwu0g9YS/giphy.gif") no-repeat center center/cover;
+  transition: all 0.5s ease-in-out;
+}
+body .emptyBox.hover {
+  border-style: dotted;
+  background: black;
+}
+body .emptyBox .filled {
+  width: 146px;
+  height: 146px;
+  background: url("https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExejViYnd4dXQ4c3pydTI5cjRxdXdwOXA2bXJ5Z2EzZmtiZzRraGg4bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/tsJHwLo3kwOx3rRBP0/giphy.gif") no-repeat center center/cover;
+  cursor: pointer;
+}
+body .emptyBox .filled.hold {
+  border: 2px solid gray;
+  width: 120px;
+  height: 120px;
+}
+body .emptyBox .filled.hide {
+  display: none;
+}
+
+@media (max-width: 800px) {
+  body {
+    flex-direction: column;
+  }
+}/*# sourceMappingURL=styles.css.map */
