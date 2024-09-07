@@ -1,0 +1,74 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: bisque;
+}
+body #canvas {
+  border: 2px solid black;
+  background-color: white;
+  cursor: crosshair;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+body .panel {
+  width: 604px;
+  height: 100px;
+  border: 2px solid black;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+}
+body .panel .buttons-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+}
+body .panel .clear-box {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+}
+body .panel #decrease,
+body .panel #increase,
+body .panel #color,
+body .panel #clear,
+body .panel #size {
+  width: 50px;
+  height: 50px;
+  margin: 5px;
+  font-size: 20px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  border: 2px solid black;
+  background-color: white;
+  cursor: pointer;
+}
+body .panel #size {
+  color: #eb0000;
+  cursor: default;
+}
+body .panel #color {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+}
+body .panel #color::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+body .panel #color::-webkit-color-swatch {
+  border: none;
+}/*# sourceMappingURL=styles.css.map */
